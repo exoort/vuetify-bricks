@@ -17,7 +17,7 @@ const bricks = computed(() => Array(props.sizeY).fill(0).map(
     <v-col cols="12">
       <div class="overflow-auto">
         <div
-          class="d-inline-flex"
+          class="d-flex"
           v-for="(bricksLine, y) in bricks"
           :key="y"
         >
@@ -25,7 +25,8 @@ const bricks = computed(() => Array(props.sizeY).fill(0).map(
             v-for="(_, x) in bricksLine"
             :key="`${y}_${x}`"
             :x="x"
-            :y="y" />
+            :y="y"
+          />
         </div>
       </div>
     </v-col>
